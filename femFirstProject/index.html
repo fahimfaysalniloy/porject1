@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>First Project|Fahim Faysal</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+
+    /*GLOBAL*/
+*{
+	margin:0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+
+}
+
+/*BODY*/
+
+    body{
+    	background: url("./images/bg-desktop.svg") no-repeat 0 300px;
+    	background-color: black;
+    	color: white;
+    	
+    	
+    }
+
+
+    section{
+    	width: 80%;
+    	
+    	margin:200px auto;
+    }
+
+
+    /*MAIN SECTION*/
+    section .files,section .progress{
+    	float:left;
+    	
+    	box-sizing: border-box;
+    	border-radius: 15px;
+
+
+    }
+
+    section .files{
+    	height: 200px;
+    	background: #303661;
+    	width:35%;
+    	border-radius: 15px 100px 15px 15px;
+    }
+    section .progress{
+    	background:#303661;;
+    	width: 55%;
+    	margin-left: 40px;
+    	height: 150px;
+    	margin-top: 45px;
+    }
+
+    /*LEFT BOX*/
+    .files #logo{
+    	margin-top: 30px;
+    	margin-left: 10%;
+
+    }
+
+    .files #smallIcons{
+    	margin-top: 40px;
+    	margin-left: 10%;
+
+    }
+
+    .files .icon{
+    	width: 90%;
+    	height: 20px;
+
+    	
+
+    }
+
+
+    .files ul li{
+    	display: inline-block;
+    	padding: 10px;
+    	background-color: black;
+    	margin-right: 5%;
+    	border-radius: 10px;
+    	
+
+
+    
+    	
+    }
+
+    /*RIGHT BOX*/
+
+
+    .progress{
+    	padding-left:  20px;
+    	font-family: helvetica,sans-serif;
+    	font-size: 14px;
+
+
+
+    }
+    .progress #title{
+    	padding-top: 35px;
+    	font-size: 1.5em;  
+    	margin-bottom: 20px;
+
+
+
+
+    	  }
+    	  /*PROGRESS BAR STYLE*/
+    .progress progress[value]{
+    	-webkit-appearance:none;
+    	appearance:none;
+    	width: 80%;
+    	height: 15px;
+    	margin-bottom: 10px;
+    	
+
+
+
+    }	
+
+    .progress progress[value]::-webkit-progress-bar {
+    	background-color: black;
+    	border-radius: 10px;
+    	clear: both;
+
+    }  
+    .progress progress[value]::-webkit-progress-value{
+    	background-image: 
+    	-webkit-linear-gradient(360deg,white, hsl(335, 100%, 65%));
+    	border-radius: 10px;
+    }
+    .progress #start,.progress #end{
+    	font-size: 1.1em;
+    	font-weight: bold;
+    	padding-top: 5px;
+
+    }
+    .progress #start{
+    	
+    	float: left;
+    }
+    .progress #end{
+    	
+    	float: right;
+    	margin-right: 20%;
+    }
+
+      /*POPUP STYLE*/
+
+    .bubble{
+    	clear: both;
+    	position: relative;
+    	background: white;
+    	border-radius: 10px;
+    	max-width: 150px;
+    	padding:15px 30px;
+    	color: black;
+    	font-size: 20px;
+    	top: -200px;
+        left: 65%;
+    }
+    .bubble:after{
+    	position: absolute;
+    	content: "";
+    	bottom: 0;
+    	left: 70%;
+    	width: 0;
+    	height: 0;
+    	border:78px solid transparent;
+    	border-top-color: white;
+    	border-bottom: 0;
+    	border-right: 0;
+    	margin-left: -20px;
+    	margin-bottom: -20px;
+
+
+
+    }
+
+    #popup #styled{
+    	font-size: 1.2em;
+    	font-weight: bold;
+    	font-family: cursive;
+
+    }
+
+/*MOBILE RESPONSIVE DESIGN*/
+
+
+@media(max-width:720px ){
+	body{
+
+		background: url("./images/bg-mobile.svg")  ;
+	}
+	section{
+
+		width: 100%;
+	}
+	section .files,section .progress{
+		float:none;
+		width: 90%;
+		margin:0;
+		
+		margin:auto;
+		margin-bottom: 20px;
+	}
+	
+	section .progress{
+		height: 200px;
+	}
+
+	.bubble{
+		position:relative;
+		margin: auto;
+		margin-bottom: 20px;
+		top: -40px;
+    left:0;
+
+	}
+	.bubble:after{
+    	position: absolute;
+    	content: "";
+    	bottom: 0;
+    	left: 0;
+    	width: 0;
+    	height: 0;
+    	border:none;
+    	border-top-color: transparent;
+    	border-bottom: 0;
+    	border-right: 0;
+    	margin-left: 0;
+    	margin-bottom: 0;
+
+
+
+    }
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+  </style>
+
+
+  
+</head>
+
+
+
+
+
+
+
+<body>
+	
+
+
+		<section>
+			<div class="container">
+					<div class="files">
+						<img id="logo" src="./images/logo.svg" alt="">
+					<div id="smallIcons">
+					<ul>
+
+						<li><img class="icon" src="./images/icon-document.svg" alt=""></li>
+						<li><img class="icon" src="./images/icon-folder.svg" alt=""></li>
+				        <li><img class="icon" src="./images/icon-upload.svg" alt=""></li>
+				    </ul>
+				    </div>
+
+					</div>
+		
+
+
+					<div class="progress">
+
+
+						  <p id="title">You’ve used 815 GB of your storage</p>
+
+						 
+						  <progress value="815" max="1000"></progress>
+						  
+
+						  <div>
+						  <p id="start">0 GB</p>
+						  <p id="end">1000 GB</p>
+						  </div>
+					</div>
+					 <div class="bubble">
+						  <p id="popup"><span id="styled">185 </span>GB Left</p>
+						  </div>
+  			</div>
+ 		 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!--  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Fahim Faysal</a>.
+  </div> -->
+</body>
+</html3
